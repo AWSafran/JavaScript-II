@@ -1,6 +1,27 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function outerBlock(){
+  let outerMessage = "The outermost Message";
+  console.log(`I'm InnerBlock and I can see ${outerMessage}`);
+  debugger;
+
+  function middleBlock(){
+    let middleMessage = "The middle message";
+    console.log(`I'm middleBlock and I can see ${outerMessage} and ${middleMessage}`);
+    debugger;
+
+    function innerBlock(){
+      let innerMessage = "The innermost Message";
+      console.log(`I'm InnerBlock and I can see ${outerMessage}, ${middleMessage}, and ${innerMessage}`);
+      debugger;
+
+    }
+    innerBlock();
+  }
+  middleBlock();
+}
+outerBlock()
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
