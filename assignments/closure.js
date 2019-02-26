@@ -51,10 +51,8 @@ const counterFactory = () => {
 
   let count = 0;
   return function(value){
-    console.log(count);
     if (value){
       return ++count;
-
     }
     else{
       return --count;
@@ -63,33 +61,26 @@ const counterFactory = () => {
 };
 
 let placeholder = counterFactory();
-// placeholder(1);
-// placeholder(1);
-// placeholder(1);
-// placeholder(0);
-// placeholder(0);
-// placeholder(0);
 
 let countObject = {
   name: "object"
 }
 
-console.log(placeholder(1));
-console.log(placeholder(1));
-console.log(placeholder(1));
-console.log(placeholder(1));
-console.log(placeholder(1));
 
-countObject.increment = placeholder(1);
-countObject.decrement = placeholder(0);
+countObject.increment = function(){ return placeholder(1);};
+countObject.decrement = function(){ return placeholder(0);};
 
-console.log(countObject.increment);
-console.log(countObject.increment);
-console.log(countObject.increment);
-console.log(countObject.increment);
-console.log(countObject.decrement);
-console.log(countObject.decrement);
-console.log(countObject.decrement);
-console.log(countObject.decrement);
+console.log(countObject.increment());
+console.log(countObject.increment());
+console.log(countObject.increment());
+console.log(countObject.increment());
+console.log(countObject.decrement());
+console.log(countObject.decrement());
+console.log(countObject.decrement());
+console.log(countObject.decrement());
+
+
+
+
 
 
