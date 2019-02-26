@@ -3,7 +3,7 @@
 
 function outerBlock(){
   let outerMessage = "The outermost Message";
-  console.log(`I'm InnerBlock and I can see ${outerMessage}`);
+  console.log(`I'm outerBlock and I can see ${outerMessage}`);
   // debugger;
 
   function middleBlock(){
@@ -13,7 +13,7 @@ function outerBlock(){
 
     function innerBlock(){
       let innerMessage = "The innermost Message";
-      console.log(`I'm InnerBlock and I can see ${outerMessage}, ${middleMessage}, and ${innerMessage}`);
+      console.log(`I'm innerBlock and I can see ${outerMessage}, ${middleMessage}, and ${innerMessage}`);
       // debugger;
 
     }
