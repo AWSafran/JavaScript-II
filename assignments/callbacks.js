@@ -54,9 +54,31 @@ function contains(item, list, cb) {
 
 
 /* STRETCH PROBLEM */
+let duplicateArray = ["apples", "apples", "oranges", "bananas", "oranges"];
 
-function removeDuplicates(array, cb) {
+
+function removeDuplicates(array) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+let placeholder = [array[0];
+
+for (let i = 1; i < array.length; i++){
+  if (placeholder.find(function(element){
+    return element === array[i];
+  })){
+
+  }
+  else{
+    placeholder.push(array[i]);
+  }
+}
+
+//add array[0] to placeholder
+//check if array[1] is on placeholder
+//if not, placeholder.push(array[1])
+//if so, do nothing
+
+
+
 }
